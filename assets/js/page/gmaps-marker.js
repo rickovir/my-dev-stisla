@@ -3,15 +3,56 @@
 // initialize map
 var map = new GMaps({
   div: '#map',
-  lat: -6.5637928,
-  lng: 106.7535061
+  lat: -6.1490404,
+  lng: 106.8030892,
+  zoom: 14
 });
 // Added a marker to the map
-map.addMarker({
-  lat: -6.5637928,
-  lng: 106.7535061,
-  title: 'Multinity',
+
+var sensor = [{
+  lat: -6.1428788,
+  lng: 106.8030892,
+  title: 'Rumah Susanto',
+  icon : '../assets/img/fire.png',
   infoWindow: {
-    content: '<h6>Multinity</h6><p>Jl. HM. Syarifudin, Bubulak, Bogor Bar., <br>Kota Bogor, Jawa Barat 16115</p><p><a target="_blank" href="http://multinity.com">Website</a></p>'
+    content: '<h6>Rumah Susanto</h6><p>Jl. Terate Nomor 3</p>'
   }
-});
+},{
+  lat: -6.1490554,
+  lng: 106.8070892,
+  title: 'Multinity',
+  icon : '../assets/img/sensor.png',
+  infoWindow: {
+    content: '<h6>Rumah Yuli</h6><p>Jl.Bahagia Kud engan mu</p>'
+  }
+},{
+  lat: -6.1456404,
+  lng: 106.8020892,
+  title: 'Multinity',
+  icon : '../assets/img/sensor.png',
+  infoWindow: {
+    content: '<h6>Rumah Yuli</h6><p>Jl.Bahagia Kud engan mu</p>'
+  }
+},{
+  lat: -6.1415404,
+  lng: 106.8080892,
+  title: 'Multinity',
+  icon : '../assets/img/sensor.png',
+  infoWindow: {
+    content: '<h6>Rumah Yuli</h6><p>Jl.Bahagia Kud engan mu</p>'
+  }
+},{
+  lat: -6.1422404,
+  lng: 106.8016892,
+  title: 'Multinity',
+  icon : '../assets/img/sensor.png',
+  infoWindow: {
+    content: '<h6>Rumah Yuli</h6><p>Jl.Bahagia Kud engan mu</p>'
+  }
+}];
+
+
+for(var i=0; i < sensor.length; i++)
+{
+	map.addMarker(sensor[i]);
+}
